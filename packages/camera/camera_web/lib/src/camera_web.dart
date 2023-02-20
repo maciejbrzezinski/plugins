@@ -99,9 +99,7 @@ class CameraPlugin extends CameraPlatform {
       // Request video and audio permissions.
       final html.MediaStream cameraStream =
           await _cameraService.getMediaStreamForOptions(
-        const CameraOptions(
-          audio: AudioConstraints(enabled: true),
-        ),
+        const CameraOptions(),
       );
 
       // Release the camera stream used to request video and audio permissions.
